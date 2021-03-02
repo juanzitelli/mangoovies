@@ -1,18 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
+import Layout from './Layout';
 
-type Props = {
-	
-}
-
-const MovieDetails = (props: Props) => {
+const MovieDetails = () => {
 
 	const { movieId } = useParams<{ movieId: string }>();
 
 	return (
-		<div>
+		<Layout>
 			<h1>Movie details page. Movie requested: {movieId}</h1>
-		</div>
+		</Layout>
 	)
 }
 

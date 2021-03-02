@@ -7,18 +7,6 @@ type Props = {
 	children?: ReactNode
 }
 
-const StyledLayoutContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100vh;
-	width: 100vw;
-`
-
-const StyledMain = styled.main`
-	min-height: 70vh;
-`
-
 const Layout = ({ children }: Props) => {
 	return (
 		<StyledLayoutContainer>
@@ -30,5 +18,19 @@ const Layout = ({ children }: Props) => {
 		</StyledLayoutContainer>
 	)
 }
+
+const StyledLayoutContainer = styled.div`
+	display: grid;
+	grid-template-rows: 1fr 10fr 1fr;
+	grid-template-columns: 1fr;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	width: 100vw;
+`
+
+const StyledMain = styled.main`
+	padding: 5vw;
+`
 
 export default Layout

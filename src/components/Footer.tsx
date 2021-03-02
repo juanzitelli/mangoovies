@@ -1,15 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 
-interface Props {
-	
-}
-
-const Footer = (props: Props) => {
+const Footer = () => {
 	return (
-		<footer>
+		<StyledFooter>
 			<h1>Footer</h1>
-		</footer>
+		</StyledFooter>
 	)
 }
+
+const StyledFooter = styled.footer`
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1rem;
+	background-color: red;
+`
 
 export default Footer
