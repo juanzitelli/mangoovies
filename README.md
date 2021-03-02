@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Mangoovies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web application created for the MangooDev coding challenge by [@juanzitelli](https://github.com/juanzitelli)
 
 ## Available Scripts
 
