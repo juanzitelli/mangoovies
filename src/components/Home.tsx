@@ -2,6 +2,7 @@ import React, { ChangeEventHandler, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Layout from './Layout'
 import OtherRecommendations from './OtherRecommendations';
+import TopRecommendations from './TopRecommendations';
 
 
 
@@ -35,10 +36,7 @@ const Home = () => {
 					<h1>Results</h1>
 				</div> :
 				<div>
-					<div id="top-five">
-						<h2>Top 5 recommendations 🔥🔥🔥</h2>
-						{/* Carousel */}
-					</div>
+					<TopRecommendations />
 					<OtherRecommendations />
 				</div>}
 			{

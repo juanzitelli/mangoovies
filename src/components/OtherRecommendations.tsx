@@ -8,11 +8,12 @@ interface Props {
 
 const OtherRecommendations = (props: Props) => {
 	const { data, isLoading, error } = useDiscoveryMovies();
+
 	return (
 		<>
 			<h2>Other recommendations ✨✨✨</h2>
 			{
-				error ? <p>{error.message}</p> : isLoading ? <p>Loading...</p> : data && <Movies movies={data} />
+				error ? <p>{error.message}</p> : isLoading ? <p>Loading...</p> : data && <Movies movies={data.filter((_, i) => i > 5)} />
 			}
 		</>
 	)

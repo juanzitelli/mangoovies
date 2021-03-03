@@ -6,14 +6,14 @@ import MovieCard from './MovieCard'
 type Props<T> = {
 	movies: T
 }
-const TMDB_IMAGES_BASE_URL = "https://image.tmdb.org/t/p/w185/"
+const TMDB_IMAGES_185PX_BASE_URL = "https://image.tmdb.org/t/p/w185/"
 
 const Movies = <T extends DiscoveryMovie[]>(props: Props<T>) => {
 	const { movies } = props;
 	return (
 		<StyledMoviesContainer>
 			{
-				movies.map(movie => <MovieCard key={movie.id} movie={movie} imageUrl={`${TMDB_IMAGES_BASE_URL}${movie.poster_path}`} />)
+				movies.map(movie => <MovieCard key={movie.id} movie={movie} imageUrl={`${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`} />)
 			}
 		</StyledMoviesContainer>
 	)
