@@ -14,7 +14,7 @@ const Movies = (props: Props) => {
 	return (
 		<StyledMoviesContainer>
 			{
-				movies && movies.map(movie => {
+				movies && movies.length === 0 ? <p>There are no movies available matching those parameters</p> : movies && movies.map(movie => {
 					const fullMoviePosterPath = `${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`
 					return (
 						<MovieCard key={movie.id} movie={movie} imageUrl={fullMoviePosterPath} />
