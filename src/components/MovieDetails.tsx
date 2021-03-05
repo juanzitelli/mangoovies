@@ -13,7 +13,6 @@ const MovieDetails = () => {
 			{
 				error ? <p>{`Whoops! 😅 Something went wrong trying to fetch the movie you requested.`} <Link to="/">Go Back and try again! </Link></p> : isLoading ? <p>Loading...</p> : movie &&
 					<StyledMovieDetails>
-						{/* <StyledMoviePoster imageUrl={`${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`} /> */}
 						<StyledMovieData>
 							<h1>{movie.title}</h1>
 							<h3>Brief description</h3>
