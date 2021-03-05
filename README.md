@@ -2,6 +2,12 @@
 
 Web application created for the MangooDev coding challenge by [@juanzitelli](https://github.com/juanzitelli)
 
+## How to run the app
+1. Clone the repository
+2. Cd into the downloaded folder
+3. Run `npm i` to install the dependencies
+4. Run `npm start` to start the application locally
+
 ## Available Scripts
 
 In the project directory, you can run:
