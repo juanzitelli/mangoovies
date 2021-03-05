@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import { DiscoveryMovie } from '../types/DiscoveryMovie'
+import { SearchMovie } from '../types/SearchMovie'
 import MovieCard from './MovieCard'
 
-type Props<T> = {
-	movies: T
+type Props = {
+	movies: DiscoveryMovie[] | SearchMovie[] | undefined
 }
 const TMDB_IMAGES_185PX_BASE_URL = "https://image.tmdb.org/t/p/w185/"
 
-const Movies = <T extends DiscoveryMovie[]>(props: Props<T>) => {
+const Movies = (props: Props) => {
 	const { movies } = props;
 	return (
 		<StyledMoviesContainer>
 			{
-				movies.map(movie => {
+				movies && movies.map(movie => {
 					const fullMoviePosterPath = `${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`
 					return (
 						<MovieCard key={movie.id} movie={movie} imageUrl={fullMoviePosterPath} />
