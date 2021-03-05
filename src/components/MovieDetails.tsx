@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import useMovie from '../hooks/useMovie';
 import Layout from './Layout';
@@ -11,7 +11,7 @@ const MovieDetails = () => {
 	return (
 		<Layout>
 			{
-				error ? <p>{error.message}</p> : isLoading ? <p>Loading...</p> : movie &&
+				error ? <p>{`Whoops! 😅 Something went wrong trying to fetch the movie you requested.`} <Link to="/">Go Back and try again! </Link></p> : isLoading ? <p>Loading...</p> : movie &&
 					<StyledMovieDetails>
 						{/* <StyledMoviePoster imageUrl={`${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`} /> */}
 						<StyledMovieData>
@@ -28,6 +28,8 @@ const MovieDetails = () => {
 							{
 								movie.homepage && <a href={`${movie.homepage}`} target="_blank" rel="noreferrer">{movie.title}'s homepage</a>
 							}
+
+							<Link to="/">Go Back</Link>
 
 						</StyledMovieData>
 					</StyledMovieDetails>
