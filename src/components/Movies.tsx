@@ -13,7 +13,12 @@ const Movies = <T extends DiscoveryMovie[]>(props: Props<T>) => {
 	return (
 		<StyledMoviesContainer>
 			{
-				movies.map(movie => <MovieCard key={movie.id} movie={movie} imageUrl={`${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`} />)
+				movies.map(movie => {
+					const fullMoviePosterPath = `${TMDB_IMAGES_185PX_BASE_URL}${movie.poster_path}`
+					return (
+						<MovieCard key={movie.id} movie={movie} imageUrl={fullMoviePosterPath} />
+					)
+				})
 			}
 		</StyledMoviesContainer>
 	)
@@ -24,7 +29,7 @@ const StyledMoviesContainer = styled.div`
 	grid-row-gap: 1vh;
 	grid-column-gap: 1vw;
 	grid-template-columns: repeat(auto-fill, minmax(5rem, 10rem));
-	grid-template-rows: minmax(20px, auto) 1fr 1fr;	
+	grid-template-rows: minmax(20px, auto);	
 	justify-content: center;
 	align-items: flex-start;
 `

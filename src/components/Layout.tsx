@@ -26,11 +26,10 @@ const StyledLayoutContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
-	width: 100vw;
 `
 
 const StyledMain = styled.main`
-	padding: 5vw;
+	padding: 3vh 5vw;
 `
 
 export default Layout

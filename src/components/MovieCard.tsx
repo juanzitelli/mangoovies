@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { DiscoveryMovie } from '../types/DiscoveryMovie'
+import { Link } from 'react-router-dom'
 
 interface Props {
 	movie: DiscoveryMovie,
@@ -10,13 +11,15 @@ interface Props {
 const MovieCard = (props: Props) => {
 	const { movie, imageUrl } = props;
 	return (
-		<StyledMovieCard>
+		<StyledMovieCard to={`/movie/${movie.id}`}>
 			<StyledPoster imageUrl={imageUrl} />
-			<span>{movie.original_title}</span>
+			<span>{movie.title}</span>
 		</StyledMovieCard>
 	)
 }
-const StyledMovieCard = styled.div`
+const StyledMovieCard = styled(Link)`
+	color: inherit;
+	text-decoration: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -27,6 +30,11 @@ const StyledMovieCard = styled.div`
 	span {
 		font-size: 1.1rem;
 		font-weight: 600;
+	}
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
 	}
 `
 

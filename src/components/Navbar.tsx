@@ -12,7 +12,7 @@ const StyledNavbar = styled.header`
 	justify-content: flex-start;
 	align-items: center;
 	padding: 1rem;
-	background-color: red;
+	
 `
 
 const LogoContainer = styled.span`
