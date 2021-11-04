@@ -1,4 +1,4 @@
-import { DiscoveryMovie } from "./DiscoveryMovie";
+import { DiscoveryMovie } from './DiscoveryMovie';
 
 export interface DiscoveryResponse {
   page: number;

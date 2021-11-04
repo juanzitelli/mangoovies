@@ -1,4 +1,4 @@
-import { SearchMovie } from "./SearchMovie";
+import { SearchMovie } from './SearchMovie';
 
 export interface SearchResponse {
   page: number;

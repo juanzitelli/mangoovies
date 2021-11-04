@@ -1,35 +1,33 @@
-import React, { ReactNode } from 'react'
-import styled from 'styled-components'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import React, { ReactNode } from 'react';
+import styled from 'styled-components';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 type Props = {
-	children?: ReactNode
-}
+  children?: ReactNode;
+};
 
 const Layout = ({ children }: Props) => {
-	return (
-		<StyledLayoutContainer>
-			<Navbar />
-			<StyledMain>
-				{children}
-			</StyledMain>
-			<Footer />
-		</StyledLayoutContainer>
-	)
-}
+  return (
+    <StyledLayoutContainer>
+      <Navbar />
+      <StyledMain>{children}</StyledMain>
+      <Footer />
+    </StyledLayoutContainer>
+  );
+};
 
 const StyledLayoutContainer = styled.div`
-	display: grid;
-	grid-template-rows: 1fr 10fr 1fr;
-	grid-template-columns: 1fr;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100vh;
-`
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+`;
 
 const StyledMain = styled.main`
-	padding: 3vh 5vw;
-`
+  padding: 3vh 5vw;
+`;
 
-export default Layout
+export default Layout;
