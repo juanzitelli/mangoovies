@@ -33,8 +33,3 @@ code {
   font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace;
 }
-/* DEBUGGING */
-
-* {
-  outline: 1px solid red;
-}
